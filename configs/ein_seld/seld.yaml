@@ -1,5 +1,5 @@
 method: ein_seld
-dataset: dcase2022task3 # dcase2022task3 or dcase2023task3
+dataset: dcase2023task3 # dcase2022task3 or dcase2023task3
 workspace_dir: ./
 dataset_dir: ./dataset
 dataset_synth: official
