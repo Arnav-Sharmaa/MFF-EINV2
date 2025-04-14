@@ -18,10 +18,6 @@ echo "Starting training with GPU:$GPU_ID"
 nvidia-smi  # Verify GPU visibility
 
 # Fix 4: Simplify the command for Kaggle environment
-CUDA_VISIBLE_DEVICES=$GPU_ID python code/main.py train \
-    --num_workers 0 \  # Start with 0 workers for debugging
-    --batch_size 2 \  # Temporary reduced batch size
-    --max_epoch 2  # Test with 2 epochs first
-
+CUDA_VISIBLE_DEVICES=$GPU_ID python code/main.py train 
 # Fix 5: Add completion message
 echo "Training completed with exit code $?"
