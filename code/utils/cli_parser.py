@@ -44,13 +44,13 @@ def parse_cli_overides():
                                  required=True, help='select preprocessing mode')
     parser_preproc.add_argument('--dataset_type', default='dev', choices=['dev', 'eval'], 
                                 help='select dataset to preprocess')
-    parser_preproc.add_argument('--num_workers', type=int, default=8, metavar='N')
+    parser_preproc.add_argument('--num_workers', type=int, default=4, metavar='N')
     parser_preproc.add_argument('--no_cuda', action='store_true', help='Do not use cuda.')
     parser_train.add_argument('--seed', type=int, default=2022, metavar='N')
-    parser_train.add_argument('--num_workers', type=int, default=8, metavar='N')
+    parser_train.add_argument('--num_workers', type=int, default=4, metavar='N')
     parser_train.add_argument('--no_cuda', action='store_true', help='Do not use cuda.')
     parser_train.add_argument('--port', type=int, default=12359,  metavar='N')
-    parser_infer.add_argument('--num_workers', type=int, default=8, metavar='N')
+    parser_infer.add_argument('--num_workers', type=int, default=4, metavar='N')
     parser_infer.add_argument('--no_cuda', action='store_true', help='Do not use cuda.')
 
     args = parser.parse_args()

@@ -161,7 +161,8 @@ class STFT(DFTBase):
         fft_window = librosa.filters.get_window(window, win_length, fftbins=True)
 
         # Pad the window out to n_fft size
-        fft_window = librosa.util.pad_center(fft_window, n_fft)
+        fft_window = librosa.util.pad_center(data=fft_window, size=n_fft)
+
 
         # DFT & IDFT matrix
         self.W = self.dft_matrix(n_fft)
@@ -257,7 +258,7 @@ class ISTFT(DFTBase):
         ifft_window = librosa.filters.get_window(window, win_length, fftbins=True)
 
         # Pad the window out to n_fft size
-        ifft_window = librosa.util.pad_center(ifft_window, n_fft)
+        ifft_window = librosa.util.pad_center(ifft_window, size=n_fft)
 
         # DFT & IDFT matrix
         self.W = self.idft_matrix(n_fft) / n_fft
