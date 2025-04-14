@@ -1,5 +1,5 @@
 method: ein_seld
-dataset: dcase2023task3 # dcase2022task3 or dcase2023task3
+dataset: dcase2022task3 # dcase2022task3 or dcase2023task3
 workspace_dir: ./
 dataset_dir: ./dataset
 dataset_synth: official
@@ -33,7 +33,7 @@ training:
   overlap: 1&2&3
   optimizer: adamw
   lr: 0.0003
-  lr_step_size: 60 # 80 at STARSS22, 60 at STARSS23
+  lr_step_size: 80 # 80 at STARSS22, 60 at STARSS23
   lr_gamma: 0.1
   max_epoch: 10
   train_fold: 0,1,2,3
