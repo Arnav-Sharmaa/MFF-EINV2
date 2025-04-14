@@ -45,7 +45,7 @@ inference:
   test_fold: 4
   train_ids: ein_seld_n1
   models: MFF_EINV2
-  batch_size: 6
+  batch_size: 2
   threshold_sed: 0.5
   model_mark: latest
   remark: None
